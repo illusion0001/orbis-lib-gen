@@ -1,7 +1,6 @@
 name: Create Stable Release
 
-on:
-  push:
+on: push
 
 jobs:
   build:
