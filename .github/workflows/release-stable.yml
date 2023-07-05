@@ -14,17 +14,15 @@ jobs:
     name: Library stubs
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout
+      uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v3
-
-    - name: Fetch ps4libdoc
+    - name: Checkout ps4libdoc
       uses: actions/checkout@v3
       with:
         repository: idc/ps4libdoc
         path: ps4libdoc
-        ref: 5.05
+        ref: '5.05'
 
     - name: Generate library stub sources
       run: python generate.py ps4libdoc/system/common/lib
