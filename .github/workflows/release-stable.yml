@@ -51,4 +51,4 @@ jobs:
       working-directory: release
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: gh release create release-${{ GITHUB.SHA }} lib.tar.gz --target ${{ GITHUB.SHA }} -t "Automated Release ${{ GITHUB.SHA }}"
+      run: gh release create release-${{ GITHUB.SHA }} lib.tar.gz --target ${{ GITHUB.SHA }} -t "Automated Release ${{ github.ref }}"
