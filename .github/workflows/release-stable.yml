@@ -1,6 +1,9 @@
 name: Create Stable Release
 
-on: push
+on:
+  push:
+    tags:
+      - 'v*'
 
 # for release create
 permissions:
