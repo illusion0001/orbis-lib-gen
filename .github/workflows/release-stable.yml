@@ -41,6 +41,12 @@ jobs:
         rm lib/libc.so
         tar -cvzf lib.tar.gz lib/*
 
+    - name: Upload generated files
+      uses: actions/upload-artifact@v3
+      with:
+        name: build
+        path: build
+
     - name: Create Release
       working-directory: release
       env:
